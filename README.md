@@ -1,4 +1,5 @@
-```const characters = [
+```
+const characters = [
     {
         name: 'Luke Skywalker',
         height: '172',
@@ -27,7 +28,8 @@
         eye_color: 'blue',
         gender: 'male',
     },
-];```
+];
+```
 
 ##MAP
   1.Get an array of all names
