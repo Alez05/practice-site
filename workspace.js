@@ -34,8 +34,7 @@ const characters = [
 // ## MAP
 
 // 1. Get an array of all names
-
-const name = characters.map((character) => {
+/*const name = characters.map((character) => {
   return character.name;
 });
 console.log(name);
@@ -58,20 +57,65 @@ const gearEyes = characters.map((carti) => ({
   eye_color: carti.eye_color,
   gender: carti.gender,
 }));
-console.log(gearEyes);
-// ## REDUCE
+console.log(gearEyes);*/
 
+// ## REDUCE
+/*
 // 1. Get the total mass of all characters
+const totalMass = characters.reduce((acc, cur) => {
+  return acc + cur.mass;
+}, 0);
+console.log(totalMass);
 // 2. Get the total height of all characters
+const totalHeight = characters.reduce((acc, cur) => {
+  return acc + cur.height;
+}, 0);
+console.log(totalHeight);
 // 3. Get the total number of characters in all the character names
+const charactersByEyeColor = characters.reduce((acc, cur) => {
+  const color = cur.eye_color;
+  if (acc[color]) {
+    acc[color]++;
+  } else {
+    acc[color] = 1;
+  }
+  return acc;
+}, {});
+console.log(charactersByEyeColor);
 // 4. Get the total number of characters by eye color (hint. a map of eye color to count)
+const totalNameCharacters = characters.reduce((acc, cur) => {
+  return acc + cur.name.length;
+}, 0);
+console.log(totalNameCharacters);
+*/
 
 // ## FILTER
 
 // 1. Get characters with mass greater than 100
+const massGreater = characters.filter((character) => {
+  return character.mass > 100;
+});
+console.log(massGreater);
 // 2. Get characters with height less than 200
+const shortCharacters = characters.filter((character) => {
+  return character.height < 200;
+});
+console.log(shortCharacters);
+
+const shCharacters = characters.filter((character) => {
+  return character.height >= 150;
+});
+console.log(shCharacters);
 // 3. Get all male characters
+const maleCharacters = characters.filter((character) => {
+  return character.gender === 'male';
+});
+console.log(maleCharacters);
 // 4. Get all female characters
+const femaleCharacters = characters.filter((character) => {
+  return character.gender === 'female';
+});
+console.log(femaleCharacters);
 
 // ## SORT
 
