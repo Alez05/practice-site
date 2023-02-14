@@ -91,18 +91,22 @@ console.log(totalNameCharacters);
 
 // ## FILTER
 
-// 1. Get characters with mass greater than 100
+/*// 1. Get characters with mass greater than 100
 const massGreater = characters.filter((character) => {
   return character.mass > 100;
 });
+
 console.log(massGreater);
 // 2. Get characters with height less than 200
-const shortCharacters = characters.filter((character) => {
+/*const shortCharacters = characters.filter((character) => {
   return character.height < 200;
 });
 console.log(shortCharacters);
-
-const shCharacters = characters.filter((character) => {
+const getCharachters = characters.filter((character) => {
+  return character.height < 200;
+});
+console.log(getCharachters);
+/*const shCharacters = characters.filter((character) => {
   return character.height >= 150;
 });
 console.log(shCharacters);
@@ -116,7 +120,7 @@ const femaleCharacters = characters.filter((character) => {
   return character.gender === 'female';
 });
 console.log(femaleCharacters);
-
+*/
 // ## SORT
 
 // 1. Sort by name
